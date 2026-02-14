@@ -289,14 +289,30 @@
     <span>⛔ NO COPY · NO REFRESH · DEVTOOLS BLOCKED</span>
     <span class="timer" id="timerDisplay">150:00</span>
   </div>
-  <!-- STUDENT INFO / START -->
-  <div id="studentSection" class="student-panel">
-    <div class="student-input">
-      <input type="text" id="studentName" placeholder="Full name (e.g., Adebayo Ola)" value="">
-      <input type="text" id="studentClass" placeholder="Class / Form (e.g., SS2)" value="">
-    </div>
-    <button class="btn" id="startExamBtn">▶ START EXAM</button>
-  </div>
+ <!-- STUDENT REGISTRATION FORM (visible before exam starts) -->
+            <div id="registrationArea" class="reg-form-container">
+                <h2>✍🏽 CANDIDATE REGISTRATION</h2>
+                <div class="reg-field">
+                    <label>FULL NAME (as it appears on exam slip)</label>
+                    <input type="text" id="studentName" placeholder="e.g., Okonkwo Chiamaka Grace" autocomplete="off">
+                </div>
+                <div class="reg-field">
+                    <label>EXAMINATION NUMBER</label>
+                    <input type="text" id="examNumber" placeholder="e.g., SCH/2025/0421" autocomplete="off">
+                </div>
+                <div class="reg-field">
+                    <label>YEAR / CLASS</label>
+                    <select id="studentClass">
+                        <option value="SS3">SS3 (Graduating)</option>
+                        <option value="SS2">SS2</option>
+                        <option value="SS1">SS1</option>
+                        <option value="JSS3">JSS3</option>
+                        <option value="OTHER">Other / External</option>
+                    </select>
+                </div>
+                <button class="btn-start" id="startExamBtn">▶ START EXAMINATION ◀</button>
+                <p style="margin-top:16px; color:#2d4b65; font-weight:500;">⚠️ Your details will be recorded with your score.</p>
+            </div>
 
   <!-- MAIN EXAM AREA (hidden until start) -->
   <div id="examArea" class="quiz-area hidden">
